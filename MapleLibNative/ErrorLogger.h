@@ -1,3 +1,4 @@
+//Sample license text.
 #pragma once
 #include "Includes.h"
 MAPLELIB

@@ -1,3 +1,4 @@
+//Sample license text.
 #include "ErrorLogger.h"
 
 
