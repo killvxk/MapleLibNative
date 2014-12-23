@@ -4,18 +4,29 @@
     <Filter Include="Helpers">
       <UniqueIdentifier>{910f62e0-53d0-453c-9acb-a12c942144c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{9ad12e35-9938-444b-bc9e-6e1cbf434242}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ErrorLogger.h">
       <Filter>Helpers</Filter>
     </ClInclude>
     <ClInclude Include="Includes.h">
-      <Filter>Helpers</Filter>
+      <Filter>Misc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ErrorLogger.cpp">
       <Filter>Helpers</Filter>
     </ClCompile>
+    <ClCompile Include="InternalInclude.h">
+      <Filter>Misc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MapleLibNative.licenseheader">
+      <Filter>Misc</Filter>
+    </None>
   </ItemGroup>
 </Project>

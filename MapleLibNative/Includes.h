@@ -14,6 +14,10 @@
  * You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
 
-#define MAPLELIB  namespace MyCompany { // begin of the MyCompany namespace
-#define END_MAPLELIB    }                     // end of the MyCompany namespace
-     
+#define MAPLELIB  namespace MapleLib {
+#define END_MAPLELIB    } 
+
+#include <Windows.h>
+#include <iostream>
+#include <string>
+#include <vector>

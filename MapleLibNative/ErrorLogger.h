@@ -23,9 +23,28 @@ namespace Helpers
 
 	class ErrorLogger
 	{
+	private:
+	// BEGIN CLASS ERROR
+		class Error
+		{
+		public:
+			ErrorLevel level;
+			std::string message;
+			Error(ErrorLevel lvl, std::string msg);
+		};
+	// END CLASS ERROR
+
 	public:
-		ErrorLogger();
-		~ErrorLogger();
+		static std::vector<Error> errorList;
+		static void Log(ErrorLevel lvl, std::string msg);
+	};
+
+	enum ErrorLevel
+	{
+		MissingFeature,
+		IncorrectStructure,
+		Critical,
+		Crash
 	};
 }
 

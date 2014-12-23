@@ -16,6 +16,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ErrorLogger.cpp" />
+    <ClCompile Include="InternalInclude.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MapleLibNative.licenseheader" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{76350E33-B933-4247-B89E-966CAB0AD8F9}</ProjectGuid>

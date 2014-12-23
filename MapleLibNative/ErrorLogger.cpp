@@ -16,12 +16,20 @@
 
 #include "ErrorLogger.h"
 
-
-ErrorLogger::ErrorLogger()
+MAPLELIB
+namespace Helpers
 {
-}
+	// Error class
+	ErrorLogger::Error::Error(ErrorLevel lvl, std::string msg)
+	{
+		this->level = lvl;
+		this->message = msg;
+	}
+	// End Error class
 
-
-ErrorLogger::~ErrorLogger()
-{
+	void ErrorLogger::Log(ErrorLevel lvl, std::string msg)
+	{
+		errorList.push_back(Error(lvl, msg));
+	}
 }
+END_MAPLELIB
