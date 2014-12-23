@@ -18,7 +18,4 @@
       <Filter>Helpers</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="MapleLibNative.licenseheader" />
-  </ItemGroup>
 </Project>
