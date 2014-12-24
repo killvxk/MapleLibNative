@@ -14,23 +14,33 @@
  * You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
 
-#include "ErrorLogger.h"
-
+#pragma once
+#include "Includes.h"
 
 MAPLELIB
-namespace Helpers
+namespace MapleCryptoLib
 {
-	// Error class
-	ErrorLogger::Error::Error(ErrorLevel lvl, std::string msg)
+	class MapleCrypto
 	{
-		this->level = lvl;
-		this->message = msg;
-	}
-	// End Error class
+	private:
+		short _mapleVersion;
 
-	void ErrorLogger::Log(ErrorLevel lvl, std::string msg)
-	{
-		errorList.push_back(Error(lvl, msg));
-	}
+	public:
+		byte* IV;
+
+		MapleCrypto(byte* iv, short mapleVersion);
+		void updateIV();
+		void crypt(byte* data);
+		byte* getNewIV(byte* oldIV);
+		byte* shuffle(byte inputByte, byte* start);
+		byte* getHeaderToClient(int size);
+		bool checkPacketToServer(byte* packet);
+		byte* multiplyBytes(byte* input, int count, int mult);
+
+
+		static byte* getHeaderToServer(int size);
+		static int getPacketLength(int packetHeader);
+
+	};
 }
 END_MAPLELIB

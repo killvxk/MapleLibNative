@@ -21,6 +21,14 @@ MAPLELIB
 namespace Helpers
 {
 
+	enum ErrorLevel
+	{
+		MissingFeature,
+		IncorrectStructure,
+		Critical,
+		Crash
+	};
+
 	class ErrorLogger
 	{
 	private:
@@ -39,13 +47,7 @@ namespace Helpers
 		static void Log(ErrorLevel lvl, std::string msg);
 	};
 
-	enum ErrorLevel
-	{
-		MissingFeature,
-		IncorrectStructure,
-		Critical,
-		Crash
-	};
+	
 }
 
 END_MAPLELIB

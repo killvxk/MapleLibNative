@@ -14,23 +14,17 @@
  * You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
 
-#include "ErrorLogger.h"
-
+#pragma once
+#include "Includes.h"
 
 MAPLELIB
-namespace Helpers
+namespace MapleCryptoLib
 {
-	// Error class
-	ErrorLogger::Error::Error(ErrorLevel lvl, std::string msg)
+	class AESEncryption
 	{
-		this->level = lvl;
-		this->message = msg;
-	}
-	// End Error class
-
-	void ErrorLogger::Log(ErrorLevel lvl, std::string msg)
-	{
-		errorList.push_back(Error(lvl, msg));
-	}
+	public:
+		static byte* aesCrypt(byte* IV, byte* data, int length);
+		static byte* aesCrypt(byte* IV, byte* data, int length, byte* key);
+	};
 }
 END_MAPLELIB

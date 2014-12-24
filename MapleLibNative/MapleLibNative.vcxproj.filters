@@ -7,6 +7,9 @@
     <Filter Include="Misc">
       <UniqueIdentifier>{9ad12e35-9938-444b-bc9e-6e1cbf434242}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MapleCryptoLib">
+      <UniqueIdentifier>{3f7fe83f-efb4-43be-96d5-1df03d65679d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ErrorLogger.h">
@@ -15,6 +18,15 @@
     <ClInclude Include="Includes.h">
       <Filter>Misc</Filter>
     </ClInclude>
+    <ClInclude Include="AESEncryption.h">
+      <Filter>MapleCryptoLib</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptoConstants.h">
+      <Filter>MapleCryptoLib</Filter>
+    </ClInclude>
+    <ClInclude Include="MapleCrypto.h">
+      <Filter>MapleCryptoLib</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ErrorLogger.cpp">
@@ -22,6 +34,15 @@
     </ClCompile>
     <ClCompile Include="InternalInclude.h">
       <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="AESEncryption.cpp">
+      <Filter>MapleCryptoLib</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptoConstants.cpp">
+      <Filter>MapleCryptoLib</Filter>
+    </ClCompile>
+    <ClCompile Include="MapleCrypto.cpp">
+      <Filter>MapleCryptoLib</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

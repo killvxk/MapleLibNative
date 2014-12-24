@@ -11,12 +11,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AESEncryption.h" />
+    <ClInclude Include="CryptoConstants.h" />
     <ClInclude Include="ErrorLogger.h" />
     <ClInclude Include="Includes.h" />
+    <ClInclude Include="MapleCrypto.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AESEncryption.cpp" />
+    <ClCompile Include="CryptoConstants.cpp" />
     <ClCompile Include="ErrorLogger.cpp" />
     <ClCompile Include="InternalInclude.h" />
+    <ClCompile Include="MapleCrypto.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MapleLibNative.licenseheader" />
@@ -50,7 +56,14 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)\Libraries\Crypto++\Inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\Libraries\Crypto++\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)\Libraries\Crypto++\Inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\Libraries\Crypto++\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>

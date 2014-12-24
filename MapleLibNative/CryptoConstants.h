@@ -14,23 +14,26 @@
  * You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
 
-#include "ErrorLogger.h"
-
+#pragma once
+#include "Includes.h"
 
 MAPLELIB
-namespace Helpers
+namespace MapleCryptoLib
 {
-	// Error class
-	ErrorLogger::Error::Error(ErrorLevel lvl, std::string msg)
-	{
-		this->level = lvl;
-		this->message = msg;
-	}
-	// End Error class
 
-	void ErrorLogger::Log(ErrorLevel lvl, std::string msg)
+
+	class CryptoConstants
 	{
-		errorList.push_back(Error(lvl, msg));
-	}
+	public:
+		static byte UserKey[128];
+		static byte bShuffle[256];
+		static byte bDefaultAESKeyValue[16];
+		static byte WZ_GMSIV[4];
+		static byte WZ_MSEAIV[4];
+		static UINT WZ_OffsetConstant;
+
+		static byte* getTrimmedUserKey();
+		
+	};
 }
 END_MAPLELIB

@@ -14,23 +14,6 @@
  * You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.*/
 
-#include "ErrorLogger.h"
+#include "MapleCrypto.h"
 
 
-MAPLELIB
-namespace Helpers
-{
-	// Error class
-	ErrorLogger::Error::Error(ErrorLevel lvl, std::string msg)
-	{
-		this->level = lvl;
-		this->message = msg;
-	}
-	// End Error class
-
-	void ErrorLogger::Log(ErrorLevel lvl, std::string msg)
-	{
-		errorList.push_back(Error(lvl, msg));
-	}
-}
-END_MAPLELIB
