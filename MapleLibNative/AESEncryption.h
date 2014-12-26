@@ -23,8 +23,8 @@ namespace MapleCryptoLib
 	class AESEncryption
 	{
 	public:
-		static byte* aesCrypt(byte* IV, byte* data, int length);
-		static byte* aesCrypt(byte* IV, byte* data, int length, byte* key);
+		static std::vector<byte> aesCrypt(std::vector<byte> IV, std::vector<byte> data, int length);
+		static std::vector<byte> aesCrypt(std::vector<byte> IV, std::vector<byte> data, int length, std::vector<byte> key);
 	};
 }
 END_MAPLELIB

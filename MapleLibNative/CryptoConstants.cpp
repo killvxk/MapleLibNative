@@ -61,7 +61,7 @@ namespace MapleCryptoLib
 	UINT CryptoConstants::WZ_OffsetConstant = 0x581C3F6D;
 
 
-	byte* CryptoConstants::getTrimmedUserKey()
+	std::vector<byte> CryptoConstants::getTrimmedUserKey()
 	{
 		byte key[32];
 		for (int i = 0; i < 128; i += 16)

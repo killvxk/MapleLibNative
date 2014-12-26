@@ -25,14 +25,14 @@
 MAPLELIB
 namespace MapleCryptoLib
 {
-	byte* AESEncryption::aesCrypt(byte* IV, byte* data, int length)
+	std::vector<byte> AESEncryption::aesCrypt(std::vector<byte> IV, std::vector<byte> data, int length)
 	{
 		// TODO: CryptoConstants
 		// For good compiling <TO CHANGE>
-		return aesCrypt(IV, data, 0, new byte[] {0});
+		return aesCrypt(IV, data, 0, std::vector<byte>());
 	}
 
-	byte* AESEncryption::aesCrypt(byte* IV, byte* data, int length, byte* key)
+	std::vector<byte> AESEncryption::aesCrypt(std::vector<byte> IV, std::vector<byte> data, int length, std::vector<byte> key)
 	{
 		using namespace CryptoPP;
 		using namespace std;
@@ -57,7 +57,7 @@ namespace MapleCryptoLib
 
 
 
-		return new byte[] {4, 6, 4, 1};
+		return std::vector<byte>( {4, 6, 4, 1} );
 	}
 }
 END_MAPLELIB

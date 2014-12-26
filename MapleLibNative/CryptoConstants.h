@@ -32,7 +32,7 @@ namespace MapleCryptoLib
 		static byte WZ_MSEAIV[4];
 		static UINT WZ_OffsetConstant;
 
-		static byte* getTrimmedUserKey();
+		static std::vector<byte> getTrimmedUserKey();
 		
 	};
 }

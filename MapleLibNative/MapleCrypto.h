@@ -26,19 +26,18 @@ namespace MapleCryptoLib
 		short _mapleVersion;
 
 	public:
-		byte* IV;
+		std::vector<byte> IV;
 
-		MapleCrypto(byte* iv, short mapleVersion);
+		MapleCrypto(std::vector<byte> iv, short mapleVersion);
 		void updateIV();
-		void crypt(byte* data);
-		byte* getNewIV(byte* oldIV);
-		byte* shuffle(byte inputByte, byte* start);
-		byte* getHeaderToClient(int size);
-		bool checkPacketToServer(byte* packet);
-		byte* multiplyBytes(byte* input, int count, int mult);
-
-
-		static byte* getHeaderToServer(int size);
+		void crypt(std::vector<byte> data);
+		std::vector<byte> getNewIV(std::vector<byte> oldIV);
+		std::vector<byte> shuffle(byte inputByte, std::vector<byte> start);
+		std::vector<byte> getHeaderToClient(int size);
+		bool checkPacketToServer(std::vector<byte> packet);
+		std::vector<byte> multiplyBytes(std::vector<byte> input, int count, int mult);
+		std::vector<byte> getHeaderToServer(int size);
+		
 		static int getPacketLength(int packetHeader);
 
 	};
